@@ -124,8 +124,9 @@ div.profile-pic img {
 
 #### Use css in conf
 
-def setup(app):
-    app.add_css_file("custom.css")
+html_css_files = [
+    'custom.css',
+]
 
 ## Add a blog
 
@@ -157,6 +158,28 @@ html_sidebars = {...
 ## Edit style
 
 https://pydata-sphinx-theme.readthedocs.io/en/v0.5.2/user_guide/customizing.html
+
+conf.py
+
+html_css_files = [
+    'custom.css',
+]
+
+custom.css
+
+/* Theme */
+/* https://pydata-sphinx-theme.readthedocs.io/en/v0.7.2/user_guide/customizing.html */
+@import "../basic.css";
+
+html[data-theme="light"] {
+    --pst-color-primary: rgb(0, 153, 255);
+    --pst-color-text-base: rgb(0, 89, 100);
+}
+
+html[data-theme="dark"] {
+    --pst-color-primary: rgb(68, 180, 255);
+    --pst-color-text-base: rgb(7, 226, 255);
+}
 
 
 # Bonus

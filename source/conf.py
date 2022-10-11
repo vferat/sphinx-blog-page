@@ -27,6 +27,7 @@ source_suffix = {
 }
 
 # -- Edit Theme -------------------------------------------------
+# https://pydata-sphinx-theme.readthedocs.io/en/v0.7.2/user_guide/configuring.html
 html_theme = 'pydata_sphinx_theme'
 
 html_theme_options = {
@@ -39,11 +40,16 @@ html_favicon = "_static/favicon.ico"
 html_title = "Pycromancer"
 
 html_static_path = ['_static']
+html_css_files = [
+    'custom.css',
+]
+
 
 # -- Sidebar Options for HTML output -------------------------------------------------
 html_sidebars = {'index': ['sidebar.html'],
                  'about': ['sidebar.html'],
-                 'blog': ['tagcloud.html', 'archives.html'],}
+                 'blog': ['tagcloud.html', 'archives.html'],
+                 'blog/**': ['tagcloud.html', 'archives.html'],}
 
 # -- Sidebar Options for HTML output -------------------------------------------------
 blog_title = html_title
@@ -52,8 +58,3 @@ fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_auto_image = 1 # Index of the image that will be displayed
 post_auto_excerpt = 1 # Number of paragraphs (default is ``1``) that will be displayed as an excerpt
-
-
-# -- Add custom CSS -------------------------------------------------
-def setup(app):
-    app.add_css_file("custom.css")
