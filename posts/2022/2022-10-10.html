@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>My First post &#8212; Pycromancer</title>
   <script>
@@ -27,6 +27,8 @@
     href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
   
@@ -39,7 +41,14 @@
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
     <script src="../../_static/design-tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/2022-10-10';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about.html" />
@@ -375,7 +384,135 @@
             <article class="bd-article" role="main">
                <section id="my-first-post">
 <h1>My First post<a class="headerlink" href="#my-first-post" title="Permalink to this heading">#</a></h1>
-<p>This is my first post.</p>
+<p>This blog post illustrates some awesome possibilities of the markdown syntax.</p>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h2>
+<p>Here is a brief overview of syntax that can be use to populate this website.</p>
+<p>Please check the <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">markdown guide</a>
+to learn the basic syntax.</p>
+<p>Additional features are listed below.</p>
+</section>
+<section id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this heading">#</a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="gh">```{figure} ../images/cool.jpg</span>
+<span class="gh">---</span>
+width: 60%
+alt: My figure text
+<span class="gh">name: my_figure</span>
+<span class="gh">---</span>
+<span class="gh">And here is my figure caption.</span>
+<span class="gh">```</span>
+</pre></div>
+</div>
+<figure class="align-default" id="my-figure">
+<a class="reference internal image-reference" href="posts/images/cool.jpg"><img alt="My figure text" src="posts/images/cool.jpg" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">And here is my figure caption.</span><a class="headerlink" href="#my-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">:name:</span></code> variable to link to figure:</p>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span> {numref}<span class="nv">`my_figure`</span>
+</pre></div>
+</div>
+<p>link to the figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">my_figure</span></code></p>
+</section>
+<section id="mathematics">
+<h2>Mathematics<a class="headerlink" href="#mathematics" title="Permalink to this heading">#</a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="s">```{math}</span>
+<span class="s">:label: my_label</span>
+<span class="s">w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}</span>
+<span class="s">```</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-my-label">
+<span class="eqno">()<a class="headerlink" href="#equation-my-label" title="Permalink to this equation">#</a></span>\[w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}\]</div>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">:label:</span></code> variable to link to equation:</p>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span> {eq}<span class="nv">`my_label`</span>
+</pre></div>
+</div>
+<p>link to the equation <a class="reference internal" href="#equation-my-label">()</a></p>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+A note
+```
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A note</p>
+</div>
+</section>
+<section id="references-and-bibliographies">
+<h2>References and bibliographies<a class="headerlink" href="#references-and-bibliographies" title="Permalink to this heading">#</a></h2>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
+<p>The extension <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-bibtex</span></code> allows to manage the bibliography of this site.
+To cite an article, add the reference in bibtex format to the <code class="docutils literal notranslate"><span class="pre">bibliography.bib</span></code> file and
+refer to the citation using the bibtex keyword:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{footcite}`ferat2022electroencephalographic`
+</pre></div>
+</div>
+<p>Will be rendered as <a class="footnote-reference brackets" href="#footcite-ferat2022electroencephalographic" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="bibliography">
+<h3>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h3>
+<p>To insert a bibliography on the page use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{footbibliography}
+```
+</pre></div>
+</div>
+<div class="docutils container" id="id2">
+<aside class="footnote brackets" id="footcite-ferat2022electroencephalographic" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Victor Férat, Martijn Arns, Marie-Pierre Deiber, Roland Hasler, Nader Perroud, Christoph M Michel, and Tomas Ros. Electroencephalographic microstates as novel functional biomarkers for adult attention-deficit/hyperactivity disorder. <em>Biological Psychiatry: Cognitive Neuroscience and Neuroimaging</em>, 7(8):814–823, 2022. <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.bpsc.2021.11.006">doi:https://doi.org/10.1016/j.bpsc.2021.11.006</a>.</p>
+</aside>
+</aside>
+</div>
+</section>
+</section>
+<section id="tabbed-content">
+<h2>Tabbed content<a class="headerlink" href="#tabbed-content" title="Permalink to this heading">#</a></h2>
+<p>Tabbed content can be added using <code class="docutils literal notranslate"><span class="pre">sphinx-tabs</span></code>:</p>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="s">````{eval-rst}</span>
+<span class="s">.. tabs::</span>
+
+<span class="s">   .. tab:: MATLAB</span>
+
+<span class="s">      matlab.</span>
+
+<span class="s">   .. tab:: PYTHON</span>
+
+<span class="s">      python.</span>
+
+<span class="s">````</span>
+</pre></div>
+</div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MATLAB</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">PYTHON</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>matlab.</p>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>python.</p>
+</div></div>
+</section>
+<section id="custom">
+<h2>Custom<a class="headerlink" href="#custom" title="Permalink to this heading">#</a></h2>
+<p>You can add HTML content directly in your <code class="docutils literal notranslate"><span class="pre">markdown</span></code> files:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border-radius:12px&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://open.spotify.com/embed/track/0VypHqSlFRWpshnWwzLe5K?utm_source=generator&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;380&quot;</span> <span class="na">frameBorder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allowfullscreen</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;</span> <span class="na">loading</span><span class="o">=</span><span class="s">&quot;lazy&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0VypHqSlFRWpshnWwzLe5K?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</section>
+<section id="toggle-content-with-buttons">
+<h2>Toggle content with buttons<a class="headerlink" href="#toggle-content-with-buttons" title="Permalink to this heading">#</a></h2>
+<p>The extension <code class="docutils literal notranslate"><span class="pre">sphinx_togglebutton</span></code> allows to add content in toggle frames.</p>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="s">```{image} https://media.giphy.com/media/FaKV1cVKlVRxC/giphy.gif</span>
+<span class="s">:class: toggle</span>
+<span class="s">```</span>
+</pre></div>
+</div>
+<img alt="https://media.giphy.com/media/FaKV1cVKlVRxC/giphy.gif" class="toggle" src="https://media.giphy.com/media/FaKV1cVKlVRxC/giphy.gif" />
+<hr class="footnotes docutils" />
+</section>
 </section>
 
 <div class="section">
@@ -416,6 +553,70 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematics">
+   Mathematics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references-and-bibliographies">
+   References and bibliographies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bibliography">
+     Bibliography
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabbed-content">
+   Tabbed content
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom">
+   Custom
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#toggle-content-with-buttons">
+   Toggle content with buttons
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
