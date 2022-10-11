@@ -6,5 +6,7 @@ Hello there
 :maxdepth: 2
 :hidden:
 about
+projects/index
+publications
 blog
 ```
