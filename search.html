@@ -4,9 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
-    <title>Victor Férat &#8212; Pycromancer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - Pycromancer</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -38,12 +36,14 @@
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
+<script src="_static/searchtools.js"></script>
+<script src="_static/language_data.js"></script>
+<script src="searchindex.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="About Me" href="about.html" /> 
+    <link rel="search" title="Search" href="#" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">  
 <style type="text/css">
@@ -89,7 +89,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
       
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="#" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
@@ -108,7 +108,7 @@
   
 
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
 
   
   
@@ -223,7 +223,7 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
   
   <div class="sidebar-header-items sidebar-primary__section">
@@ -302,21 +302,6 @@
   </div>
 
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item">
-<div class="profile-pic"><img src="_static/profile.jpg" /></div>
-
-<div class="bio">
-    <div class="name">
-        Victor Férat
-    </div>
-    <div class="title">
-        Neurosciences | Python | Open Source
-    </div>
-</div>
-    </div>
-  </div>
-  
 
   
   <div class="sidebar-end-items sidebar-primary__section">
@@ -336,32 +321,43 @@
             </div>
             
             
-            <article class="bd-article" role="main">
-               <section id="victor-ferat">
-<h1>Victor Férat<a class="headerlink" href="#victor-ferat" title="Permalink to this heading">#</a></h1>
-<p>Hello there</p>
-<div class="toctree-wrapper compound">
-</div>
-</section>
+<div class="bd-search-container">
+  <h1>Search</h1>
 
-<div class="section">
-   
+  <noscript>
+    <div class="admonition error">
+      <p class="admonition-title">Error</p>
+      <p>
+        Please activate JavaScript to enable the search functionality.
+      </p>
+    </div>
+  </noscript>
+
+  
+<form class="bd-search d-flex align-items-center" action="#" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+
+  <div id="search-results"></div>
 </div>
 
-            </article>
-            
+<script>
+// Activate the search field on page load
+let searchInput = document.querySelector("form.bd-search input");
+if (searchInput) {
+  searchInput.focus();
+  searchInput.select();
+  console.log("[PST]: Set focus on search field.");
+}
+</script>
+
             
             
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="about.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">About Me</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
 </div>
             </footer>
             
@@ -382,12 +378,6 @@
 
 <div class="toc-item">
   
-<div class="tocsection sourcelink">
-    <a href="_sources/index.md.txt">
-        <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-</div>
-
 </div>
 
             </div>
