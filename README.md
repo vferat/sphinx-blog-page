@@ -192,6 +192,10 @@ insert biblio:
 ### Twitter
 "sphinxcontrib.twitter"
 
+### Panels with sphinx_design
+pip install sphinx_design
+
+extensions += ['sphinx_design']
 
 ## Edit style
 
