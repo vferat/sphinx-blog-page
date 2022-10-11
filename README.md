@@ -63,6 +63,20 @@ html_theme_options = {
 html_favicon = "_static/favicon.ico"
 html_title = "Pycromancer"
 
+## Bonus: Adda custom icon link
+
+html_theme_options = {
+  "github_url": "https://github.com/vferat/",
+  "twitter_url": "https://twitter.com/ferat_victor",
+  "icon_links": [
+        {
+            "name": "ORCID",
+            "url": "https://orcid.org/0000-0003-1952-7657",
+            "icon": "fa-brands fa-orcid",
+        },],
+  "search_bar_text": "Search this site...",
+}
+
 ## Configure the nav bar
 Create a new page 'about.md'
 
@@ -150,6 +164,30 @@ html_sidebars = {...
 
 ### Bibliography
 
+#### install sphinxbibtex
+pip install sphinxcontrib-bibtex
+
+#### Edit conf.py
+extensions += ['sphinxcontrib.bibtex']
+bibtex_bibfiles = ['bibliography.bib']
+
+#### Create bibliography
+create 'bibliography.bib'
+
+# Publications
+
+
+#### Create bibliography page
+create publications.md
+add it to toctree in index.md
+
+insert biblio:
+
+
+```{bibliography}
+:list: bullet
+:filter: author % "Ferat" or "Férat"
+```
 
 ### Twitter
 "sphinxcontrib.twitter"
