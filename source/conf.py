@@ -71,6 +71,18 @@ post_auto_excerpt = 1 # Number of paragraphs (default is ``1``) that will be dis
 extensions += ['sphinxcontrib.bibtex']
 bibtex_bibfiles = ['bibliography.bib']
 
-# -- sphinx design -------------------------------------------------
+# -- Markdown syntax extension -------------------------------------------------
+
+# Cards and grid
 extensions += ['sphinx_design']
 myst_enable_extensions = ["colon_fence"]
+
+# toggle
+extensions += ['sphinx_togglebutton']
+
+# figures
+numfig = True
+
+# Tabs
+extensions += ['sphinx_tabs.tabs']
+

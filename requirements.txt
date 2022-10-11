@@ -4,3 +4,5 @@ pydata_sphinx_theme
 ablog
 sphinxcontrib-bibtex
 sphinx_design
+sphinx_togglebutton
+sphinx-tabs
